@@ -15,7 +15,12 @@ public class ListasEnlazadas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Lista lista = new Lista();
+        lista.pushFront(10);
+        lista.pushFront(20);
+        lista.pushFront(30);
+        lista.pushFront(5);
+        lista.imprimir();
     }
     
 }
