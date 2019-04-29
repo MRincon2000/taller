@@ -14,6 +14,8 @@ public class Lista {
     private Nodo tail;
 
     public Lista() {
+        this.head = null;
+        this.tail = null;
     }
     
     public Lista(Nodo head) {
@@ -23,6 +25,12 @@ public class Lista {
     public Lista(Nodo head, Nodo tail) {
         this.head = head;
         this.tail = tail;
+    }
+    
+    public void pushFront(int key){
+        Nodo nodo = new Nodo(head, key);
+        head = nodo;
+        if(tail == null) tail = nodo;        
     }
     
     
