@@ -12,25 +12,19 @@ package listasenlazadas;
 public class Lista {
     private Nodo head;
     private Nodo tail;
-
-    /*public Lista() {
-        this.head = null;
-        this.tail = null;
-    }
-    
-    public Lista(Nodo head) {
-        this.head = head;
-    }
-
-    public Lista(Nodo head, Nodo tail) {
-        this.head = head;
-        this.tail = tail;
-    }*/
     
     public void pushFront(int key){
         Nodo nodo = new Nodo(head, key);
         head = nodo;
         if(tail == null) tail = head;        
+    }
+    
+    public void popFront(){
+        if(head != null){
+            head = head.next;
+            if(head == null) tail = null;
+        }
+        else System.out.println("Lista Vacia");        
     }
     
     public void imprimir(){
