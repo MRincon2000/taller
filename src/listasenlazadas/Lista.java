@@ -13,7 +13,7 @@ public class Lista {
     private Nodo head;
     private Nodo tail;
 
-    public Lista() {
+    /*public Lista() {
         this.head = null;
         this.tail = null;
     }
@@ -25,12 +25,23 @@ public class Lista {
     public Lista(Nodo head, Nodo tail) {
         this.head = head;
         this.tail = tail;
-    }
+    }*/
     
     public void pushFront(int key){
         Nodo nodo = new Nodo(head, key);
         head = nodo;
-        if(tail == null) tail = nodo;        
+        if(tail == null) tail = head;        
+    }
+    
+    public void imprimir(){
+        if(head != null){
+            Nodo nodo = head;
+            while(nodo != null){
+                System.out.println(nodo.key);
+                nodo = nodo.next;
+            }
+        }
+        else System.out.println("Lista Vacia");
     }
     
     
