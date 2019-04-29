@@ -21,6 +21,9 @@ public class ListasEnlazadas {
         lista.pushFront(30);
         lista.pushFront(5);
         lista.imprimir();
+        System.out.println("----------");
+        lista.popFront();
+        lista.imprimir();
     }
-    
+
 }
