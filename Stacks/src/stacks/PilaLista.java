@@ -53,6 +53,7 @@ public class PilaLista<T> implements Stack<T>  {
         }        
         T saveVal = this.head.element;        
         this.head = this.head.next;
+        System.out.println(this.head.next.element);
         size--;
         return saveVal;
     }
