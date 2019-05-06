@@ -50,12 +50,11 @@ public class PilaLista<T> implements Stack<T>  {
         if( isEmpty() ){
             System.out.println("Pero ta vaciaaaa");
             return null;
-        }
-        
-        ChainNode<T> node = this.head;        
+        }        
+        T saveVal = this.head.element;        
         this.head = this.head.next;
         size--;
-        return node.element;
+        return saveVal;
     }
     
 }

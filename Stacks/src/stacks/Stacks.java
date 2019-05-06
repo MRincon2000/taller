@@ -22,10 +22,10 @@ public class Stacks {
         a.push(new Libro(1, "Ensayo sobre la ceguera"));
         a.push(new Libro(2, "Crimen y Castigo"));
         
-        System.out.println(a.pop());
         
-        a.peek();
         System.out.println(a.size);
+        System.out.println(a.pop().titulo);
+        System.out.println(a.peek());
     }
     
 }
