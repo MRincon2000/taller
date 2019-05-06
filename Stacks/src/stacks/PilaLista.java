@@ -14,6 +14,13 @@ import java.util.EmptyStackException;
 public class PilaLista<T> implements Stack<T>  {
     
     ChainNode<T> head;
+    int size;
+
+    public PilaLista() {
+        this.head = new ChainNode<>();
+        this.size = 0;
+    }
+    
     
     
     @Override
@@ -23,21 +30,31 @@ public class PilaLista<T> implements Stack<T>  {
     
     @Override
     public T peek() {
-        if( isEmpty() ) throw new EmptyStackException();
-        return this.head.element;
+        if( isEmpty() ){
+            System.out.println("Pero ta vaciaaaa");
+            return null;
+        } 
+        else return this.head.element;
     }
 
     @Override
     public void push(T theObject) {
-        ChainNode<T> node = new ChainNode<>();
+        ChainNode<T> node = new ChainNode<>(theObject);
+        node.next = this.head.next;
         this.head = node;
+        size++;
     }
 
     @Override
     public T pop() {
-        if( isEmpty() ) throw new EmptyStackException();
-        ChainNode<T> node = this.head;
-        this.head = head.next;
+        if( isEmpty() ){
+            System.out.println("Pero ta vaciaaaa");
+            return null;
+        }
+        
+        ChainNode<T> node = this.head;        
+        this.head = this.head.next;
+        size--;
         return node.element;
     }
     
