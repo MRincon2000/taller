@@ -20,22 +20,25 @@ public class ColaLista<T> implements Queue<T> {
 
     @Override
     public T getFrontElement() {
-        return front.element;
+        return isEmpty() ? null : front.element;
     }
 
     @Override
     public T getRearElement() {
-        return rear.element;
+        return isEmpty() ? null : rear.element;
     }
 
     @Override
     public void put(T theObject) {
-        
+        ChainNode<T> p = new ChainNode<>(theObject);
+        if(front == null) front = p;
+        else rear.next = p;        
+        rear = p;
     }
 
     @Override
     public T remove() {
-        
+        return T;
     }
     
 }

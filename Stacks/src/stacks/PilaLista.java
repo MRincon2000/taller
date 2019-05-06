@@ -30,11 +30,7 @@ public class PilaLista<T> implements Stack<T>  {
     
     @Override
     public T peek() {
-        if( isEmpty() ){
-            System.out.println("Pero ta vaciaaaa");
-            return null;
-        } 
-        else return this.head.element;
+        return isEmpty() ? null : this.head.element;
     }
 
     @Override
@@ -52,8 +48,8 @@ public class PilaLista<T> implements Stack<T>  {
             return null;
         }        
         T saveVal = this.head.element;        
-        this.head = this.head.next;
         System.out.println(this.head.next.element);
+        this.head = this.head.next;        
         size--;
         return saveVal;
     }
