@@ -16,7 +16,16 @@ public class Stacks {
      */
     public static void main(String[] args) {
         
+        PilaLista<Libro> a = new PilaLista<>();
         
+        a.push(new Libro(0, "Cien años de soledad"));
+        a.push(new Libro(1, "Ensayo sobre la ceguera"));
+        a.push(new Libro(2, "Crimen y Castigo"));
+        
+        System.out.println(a.pop());
+        
+        a.peek();
+        System.out.println(a.size);
     }
     
 }
