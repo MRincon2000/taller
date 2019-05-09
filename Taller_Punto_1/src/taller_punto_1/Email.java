@@ -40,12 +40,13 @@ public class Email {
         this.remitente = remitente;
     }
 
-    public Email(Cuenta destinatario, Cuenta remitente,String contenido, String asunto) {
+    public Email(Cuenta destinatario, Cuenta remitente, String contenido, String asunto ) {
         this.contenido = contenido;
         this.asunto = asunto;
         this.destinatario = destinatario;
         this.remitente = remitente;
     }
+
     
     
     

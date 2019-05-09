@@ -31,5 +31,12 @@ public class Cuenta {
     }
     public void setNumero_de_correos(int numero_de_correos) {
         this.numero_de_correos = numero_de_correos;
-//    }    
+ 
+}
+
+    public Cuenta(String direccion, String nombre) {
+        this.direccion = direccion;
+        this.nombre = nombre;
+    }
+    
 }
